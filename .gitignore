@@ -1,3 +1,15 @@
+# /node_modules
+/01javascriptWebpackTemplate/node_modules
+/02javascriptWebpackJestTestingTemplate/node_modules
+/03reactWebpackTemplate/node_modules
+/04reactWebpackJestReacttestinglibraryTestingTemplate/node_modules
+
+# /dist
+/01javascriptWebpackTemplate/dist
+/02javascriptWebpackJestTestingTemplate/dist
+/03reactWebpackTemplate/dist
+/04reactWebpackJestReacttestinglibraryTestingTemplate/dist
+
 # Logs
 logs
 *.log
