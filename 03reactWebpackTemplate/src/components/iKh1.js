@@ -7,6 +7,8 @@ const iKh1 = () => {
 
 	Ikh1.classList.add('iKh1Class');
 
+	console.log('iK from iKh1.js file')
+
 	return Ikh1;
 }; /*END iKh1 */
 

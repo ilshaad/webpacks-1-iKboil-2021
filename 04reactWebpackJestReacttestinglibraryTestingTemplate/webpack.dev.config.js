@@ -11,10 +11,11 @@ module.exports = {
 	mode: 'development',
 	devtool: 'inline-source-map',
 	devServer: {
-		contentBase: path.resolve(__dirname, '.dist'),
-		index: 'index.html',
-		port: 9000,
-		writeToDisk: true
+		static: {
+			directory: path.join(__dirname, 'dist'),
+		},
+		compress: true,
+		port: 9000
 	},
 	module: {
 		rules: [
@@ -41,8 +42,13 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'iK development react webapck jest react-testing-library testing template',
+			title: 'development javascript webapck template',
 			template: 'src/index.hbs',
+			meta: {
+				viewport: 'width=device-width, initial-scale=1',
+				description: 'iK SEO describe',
+				keywords: 'iK SEO keywords, however it might not be necessary because it counts for little for google'
+			}
 		})
 	]
 };

@@ -48,8 +48,13 @@ module.exports = {
 			filename: 'styles.[contenthash].css'
 		}),
 		new HtmlWebpackPlugin({
-			title: 'iK production react webapck jest react-testing-library testing template',
+			title: 'development javascript webapck template',
 			template: 'src/index.hbs',
+			meta: {
+				viewport: 'width=device-width, initial-scale=1',
+				description: 'iK SEO describe',
+				keywords: 'iK SEO keywords, however it might not be necessary because it counts for little for google'
+			}
 		})
 	]
 };

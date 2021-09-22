@@ -7,6 +7,10 @@ const iKimg = () => {
 
 	Ikimg.style.cssText = 'width: 200px; border: 3px green dashed';
 
+	console.log('iK from iKimg.js file')
+	
+	Ikimg.alt = 'lizard pic'
+
 	return Ikimg;
 }; /*END iKimg */
 

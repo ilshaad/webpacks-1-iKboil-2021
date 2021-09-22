@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`iKh1 component imports css file so I want to test jest handling other different type of file wihtin the component snapshotting iKh1 function callback 1`] = `
+<h1
+  class="iKh1Class"
+>
+  iK from iKh1.js
+</h1>
+`;
