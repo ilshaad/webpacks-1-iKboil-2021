@@ -10,8 +10,15 @@ cd 01javascriptWebpackTemplate/ && npm run ikupdate && cd ../02javascriptWebpack
 ----------------------------------------
 ## == iK extra configurations details
 ### for async/await function, use this code in your babel config js file:
++\ not sure if this is complete but first test out & if not working checkout your specific bookmark
+```bash
+npm i -S regenerator-runtime
+```
+then
 ```javascript
-"presets": [["@babel/preset-env", { "targets": { "esmodules": true }} ]]
+// on top of js file
+import "core-js/stable"; //first test without & see if you need it
+import "regenerator-runtime/runtime";
 ```
 ----------------------------------------
 ----------------------------------------

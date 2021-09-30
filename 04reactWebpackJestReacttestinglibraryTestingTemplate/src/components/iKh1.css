@@ -1,3 +1,6 @@
 .iKh1Class {
 	background-color: pink;
+	display: flex;
+	color: cyan;
+	font-size: 28px;
 }

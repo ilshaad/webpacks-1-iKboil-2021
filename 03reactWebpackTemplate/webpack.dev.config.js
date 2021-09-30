@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
 	entry: './src/index.js',
@@ -13,6 +14,7 @@ module.exports = {
 	devServer: {
 		static: {
 			directory: path.join(__dirname, 'dist'),
+			watch: true
 		},
 		compress: true,
 		port: 9000
@@ -49,6 +51,7 @@ module.exports = {
 				description: 'iK SEO describe',
 				keywords: 'iK SEO keywords, however it might not be necessary because it counts for little for google'
 			}
-		})
+		}),
+		new ReactRefreshWebpackPlugin()
 	]
 };
