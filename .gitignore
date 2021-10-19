@@ -10,6 +10,9 @@
 /03reactWebpackTemplate/dist
 /04reactWebpackJestReacttestinglibraryTestingTemplate/dist
 
+# / test snapshot files
+**/__snapshots__
+
 # Logs
 logs
 *.log
