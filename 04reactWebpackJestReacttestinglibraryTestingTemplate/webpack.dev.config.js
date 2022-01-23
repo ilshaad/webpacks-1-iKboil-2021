@@ -8,7 +8,7 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
-        clean: true,
+        clean: { keep: /iKmanifestDir/ },
     },
     mode: "development",
     devtool: "inline-source-map",
@@ -56,6 +56,7 @@ module.exports = {
                 keywords:
                     "iK SEO keywords, however it might not be necessary because it counts for little for google",
             },
+            publicPath: "/",
         }),
         new ReactRefreshWebpackPlugin(),
     ],

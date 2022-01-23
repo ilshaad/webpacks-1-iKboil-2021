@@ -4,10 +4,10 @@
     "description": "",
     "private": true,
     "scripts": {
-        "ikupdate": "npm i && npm update && npm audit fix",
-        "build": "webpack --config webpack.production.config.js",
+        "ikupdate": "npm i && npm update && npm audit fix --force",
+        "build": "rm -rfv ./dist && webpack --config webpack.production.config.js && cp -rv ./src/iKmanifestDir ./dist/",
         "prod": "npm run build && node src/server.js",
-        "start": "webpack serve --config webpack.dev.config.js --hot",
+        "start": "rm -rfv ./dist && mkdir dist && cp -rv ./src/iKmanifestDir ./dist && webpack serve --config webpack.dev.config.js --hot",
         "lint": "eslint .",
         "test": "jest",
         "testw": "jest src/components/__testing__ --watch --coverage=true --onlyChanged"

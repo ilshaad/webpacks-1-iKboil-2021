@@ -8,8 +8,7 @@ module.exports = {
     output: {
         filename: "bundle.[contenthash].js",
         path: path.resolve(__dirname, "dist"),
-        clean: true,
-        publicPath: "/static/",
+        clean: { keep: /iKmanifestDir/ },
     },
     mode: "production",
     optimization: {
@@ -56,6 +55,7 @@ module.exports = {
                 description: "iK SEO describe",
                 keywords:
                     "iK SEO keywords, however it might not be necessary because it counts for little for google",
+                publicPath: "/",
             },
         }),
     ],

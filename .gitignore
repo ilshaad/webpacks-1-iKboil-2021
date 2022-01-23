@@ -10,6 +10,13 @@
 /03reactWebpackTemplate/dist
 /04reactWebpackJestReacttestinglibraryTestingTemplate/dist
 
+# /package-lock.json
+/01javascriptWebpackTemplate/package-lock.json
+/02javascriptWebpackJestTestingTemplate/package-lock.json
+/03reactWebpackTemplate/package-lock.json
+/04reactWebpackJestReacttestinglibraryTestingTemplate/package-lock.json
+
+
 # / test snapshot files
 **/__snapshots__
 
