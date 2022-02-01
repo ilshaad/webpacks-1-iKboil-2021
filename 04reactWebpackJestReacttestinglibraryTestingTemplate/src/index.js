@@ -1,26 +1,24 @@
-// import 'react-app-polyfill/ie11'; 
+// import 'react-app-polyfill/ie11';
 // import 'normalize.css';
 // import './CSS/oikGrid.css';
 // import './index.css';
-import App from './App';
-import React from 'react';
-import ReactDOM from 'react-dom';
+import App from "./App";
+import React from "react";
+import ReactDOM from "react-dom";
 // import PropTypes from 'prop-types';
-// import { BrowserRouter, Route } from 'react-router-dom'; 
+// import { BrowserRouter, Route } from 'react-router-dom';
 // import { createStore, applyMiddleware, compose } from 'redux';
 // import { Provider, connect, ReactReduxContext } from 'react-redux';
 // import ReduxThunk from 'redux-thunk';
 // import axios from 'axios';
 // import DOMPurify from 'dompurify';
 
-
 /*To listen to any unhandled promise rejections (no catch handler?)
 +\ you probably remove it afterwards if you think you do not need it. */
-window.addEventListener('unhandledrejection', function(event) {
-	console.warn(event.promise);
-	console.warn(event.reason);
+window.addEventListener("unhandledrejection", function (event) {
+    console.warn("iK unhandledrejection (promise): ", event.promise);
+    console.warn("iK unhandledrejection (reason): ", event.reason);
 });
-
 
 /*iK React with not redux store */
 /*IK you could set up react context api if needed */
@@ -28,7 +26,7 @@ ReactDOM.render(
     <React.StrictMode>
         <App />
     </React.StrictMode>,
-    document.getElementById('root')
+    document.getElementById("root")
 ); /*END ReactDOM.render() */
 
 /*iK using React-Redux */
@@ -42,14 +40,6 @@ ReactDOM.render(
 //     </React.StrictMode>,
 //     document.getElementById('root')
 // ); /*END ReactDOM.render() */
-
-
-
-
-
-
-
-
 
 // import iKh1 from './components/iKh1.js';
 // import iKimg from './components/iKimg.js';

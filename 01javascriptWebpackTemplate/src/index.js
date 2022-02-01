@@ -1,23 +1,30 @@
-import iKh1 from './components/iKh1.js';
-import iKimg from './components/iKimg.js';
+import iKh1 from "./components/iKh1.js";
+import iKimg from "./components/iKimg.js";
 // import iKasync from './components/iKasync.js';
 
+/*To listen to any unhandled promise rejections (no catch handler?)
++\ you probably remove it afterwards if you think you do not need it. */
+window.addEventListener("unhandledrejection", function (event) {
+    console.warn("iK unhandledrejection (promise): ", event.promise);
+    console.warn("iK unhandledrejection (reason): ", event.reason);
+});
+
 const iKindexjs = () => {
-	const iKdiv = document.createElement('div');
+    const iKdiv = document.createElement("div");
 
-	iKdiv.textContent = 'iK from iKindexjs';
+    iKdiv.textContent = "iK from iKindexjs";
 
-	iKdiv.style.border = 'red 3px solid';
+    iKdiv.style.border = "red 3px solid";
 
-	/*iK if you want to use & test out async/await function in your app */
-	// iKasync() /*1+*/
+    /*iK if you want to use & test out async/await function in your app */
+    // iKasync() /*1+*/
 
-	console.log('iK from the index.js')
+    console.log("iK from the index.js");
 
-	return iKdiv;
+    return iKdiv;
 }; /*END iKindexjs */
 
-const iKbody = document.getElementsByTagName('body')[0];
+const iKbody = document.getElementsByTagName("body")[0];
 
 iKbody.appendChild(iKindexjs());
 iKbody.appendChild(iKh1());
