@@ -6,7 +6,7 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
-        clean: { keep: /iKmanifestDir/ },
+        clean: false,
     },
     mode: "development",
     devtool: "inline-source-map",

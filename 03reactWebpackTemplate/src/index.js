@@ -16,8 +16,8 @@ import ReactDOM from "react-dom";
 /*To listen to any unhandled promise rejections (no catch handler?)
 +\ you probably remove it afterwards if you think you do not need it. */
 window.addEventListener("unhandledrejection", function (event) {
-    console.warn(event.promise);
-    console.warn(event.reason);
+    console.warn("iK unhandledrejection (promise): ", event.promise);
+    console.warn("iK unhandledrejection (reason): ", event.reason);
 });
 
 /*iK React with not redux store */
