@@ -54,8 +54,6 @@
 	-Used image-minimizer-webpack-plugin / Imagemin / imagemin-mozjpeg plugins to compress my jpeg image of the lizard
 		-I compress image from 232kb to 11kb using only 5% quality
 
--README.md file
-
 -include netlify form submission as contact form
 	-create /form route for the contact form
 	-create form link on header
@@ -75,9 +73,13 @@
 	-test form submission is working accordingly
 	-check synk result has improved
 
+-README.md file
+
 ================ TODO
 
 ================ COME BACK
+
+================ WRITE IN YOUR NOTE DOC
 
 ================ PLAYGROUND
 
