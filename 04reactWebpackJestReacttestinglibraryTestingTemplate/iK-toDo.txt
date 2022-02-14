@@ -1,13 +1,4 @@
 20220204 - ikth-counter-v5-webpack-rRouter-redux-sass-2022
-================ MISSION
--version05: webpack / react / react-router / redux / sass / redux devtools
--three routes:
-	- / counter page with working buttons
-	- /side whatever page to show path pages work with react router
-	- /* error page
--working counter with redux
--use of SASS within my webpack template
-
 ================ LEFT OFF
 -
 ================ DONE
@@ -80,6 +71,15 @@
 ================ COME BACK
 
 ================ WRITE IN YOUR NOTE DOC
+
+================ MISSION
+-version05: webpack / react / react-router / redux / sass / redux devtools
+-three routes:
+	- / counter page with working buttons
+	- /side whatever page to show path pages work with react router
+	- /* error page
+-working counter with redux
+-use of SASS within my webpack template
 
 ================ PLAYGROUND
 
