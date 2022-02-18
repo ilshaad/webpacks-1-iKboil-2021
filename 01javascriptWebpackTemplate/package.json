@@ -10,7 +10,8 @@
     "dev": "eslint . && rm -rfv ./dist && mkdir dist && cp -rv ./src/public/iKmanifestDir ./dist && webpack serve --config webpack.dev.config.js --hot",
     "server": "node src/server.js",
     "lint": "eslint .",
-    "ikclean": "rm -fr node_modules/ package-lock.json dist/ && npm cache clean -vf && npm run ikupdate && npm run dev"
+    "ikclean": "rm -fr node_modules/ package-lock.json dist/ && npm cache clean -vf && npm run ikupdate && npm run dev",
+    "ikcleanci": "rm -fr node_modules/ dist/ && npm cache clean -vf && npm ci && npm run dev"
   },
   "keywords": [],
   "author": "",

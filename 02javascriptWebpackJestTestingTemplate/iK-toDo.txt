@@ -72,6 +72,8 @@
 
 ================ WRITE IN YOUR NOTE DOC
 
+================ NOTE TO SELF
+
 ================ MISSION
 -version05: webpack / react / react-router / redux / sass / redux devtools
 -three routes:
