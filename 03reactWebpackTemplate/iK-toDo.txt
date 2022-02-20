@@ -1,5 +1,6 @@
 20220204 - ikth-counter-v5-webpack-rRouter-redux-sass-2022
-================ LEFT OFF
+-version05: webpack / react / react-router / redux / sass / redux devtools
+================ LEFT OFF 20220220
 -
 ================ DONE
 -check for any outdated modules & update if any
@@ -7,6 +8,9 @@
 -ensure page is working & on live server (netlify)
 	-master branch
 	-check package.json file is correct if still not working, particulary entry file "main"
+
+	-configure netlify configuration file (netlify.toml) to redirect all static routes (react-router) instead of using the typical _redirects file we used before
+		-you can set up your build too & etc
 
 -install normalize.css
 
@@ -19,13 +23,13 @@
 
 -create links for all routes in header component
 
--create counter component scaffold with display number & its three buttons (increment/decrement/reset)
-	-do not worry about the logic as we will do that with redux action creators
-
 -implement SASS to routes
 	-install sass
 	-create global sass
 	-create individual component sass
+
+-create counter component scaffold with display number & its three buttons (increment/decrement/reset)
+	-do not worry about the logic as we will do that with redux action creators
 
 -implement redux to the counter component
 	-setup redux first with store & reducers
@@ -34,11 +38,6 @@
 	-use counter state for CounterDisplay component
 	-create action creators
 	-connect the action creators to the buttons
-
--re-insert iKmanifestDir/iKdummyManifest.txt back to the src/ because there is error in Netlify deployment due to npm run build has specific commands to include iKmanifesDir/
-
--configure netlify configuration file (netlify.toml) to redirect all static routes (react-router) instead of using the typical _redirects file we used before
-	-you can set up your build too & etc
 
 -add image to /side & optimize it
 	-try to ensure it is optimized using webpack loaders/plugins
@@ -56,19 +55,25 @@
 		-submit button
 	-git commit & test if form submission is working accordingly
 
+-do remaining COME BACK
+
 -check up on snyk recommendations
 
--update README.md with form submission /form
+-do lighthouse testing
 
--git commit & see netlify deploy
-	-test form submission is working accordingly
-	-check synk result has improved
+-do remaining WRITE IN YOUR NOTE DOC
+
+-check if repo name needs changing
 
 -README.md file
+
+-git commit & see deploy build was a success
 
 ================ TODO
 
 ================ COME BACK
+
+================ SKIPPED TODOS
 
 ================ WRITE IN YOUR NOTE DOC
 
