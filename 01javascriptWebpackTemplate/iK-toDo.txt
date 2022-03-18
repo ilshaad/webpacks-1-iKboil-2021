@@ -1,61 +1,241 @@
-20220204 - ikth-counter-v5-webpack-rRouter-redux-sass-2022
--version05: webpack / react / react-router / redux / sass / redux devtools
+20220316- bug-tracker-iK
 ================ LEFT OFF 20220220
--
+-still setting up the gameplan
+	-CCC create modal for both comment edit & delete button to ensure they certain with their decision
+		-iK however I think I finish with this & possibly moving onto the styling. But think of any other things you got to do
+
 ================ DONE
+
+================ TODO
+-create your logo bug tracker for the app
+	-use canvas.com
+	-also gain your two primary theme colour from it too
+
+-Create the git project
+	-Setup README.md file
+		-mostly blank at first
+
+-link synk to your project
+
+-create simple structure for both frontend & backend
+
 -check for any outdated modules & update if any
+	-backend (backend-boil-2022 repo)
+	-frontend (webpack-1-iKboil repo)
 
--ensure page is working & on live server (netlify)
-	-master branch
-	-check package.json file is correct if still not working, particulary entry file "main"
+-setup a simple working backend server
+	-express.js
+	-install any other package you think is worthy, such as:
+		-nodemon
 
-	-configure netlify configuration file (netlify.toml) to redirect all static routes (react-router) instead of using the typical _redirects file we used before
-		-you can set up your build too & etc
+-setup a simple working frontend server
+	-webpack
+	-React
+	-Typescript
 
--install normalize.css
+-create docker-compose
+	-create Dockerfile for backend
+	-create Dockerfile for frontend
+	-create docker-compose.yml for root document
 
--create three routes scaffold with react-router
-	- / counter page
-	- /side whatever page
-	- /* error page
+-create a Heroku app for both backend & frontend
 
--create layout for each route (eg. header / footer)
+-create github actions
+	-deploys on your heroku apps
 
--create links for all routes in header component
+-install cors for backend
+	-list production & development environment urls
+	-setup cors for multiple routes
+	-test frontend is able to fetch from the backend
 
--implement SASS to routes
-	-install sass
-	-create global sass
-	-create individual component sass
+-sketch out some mock data you would like to use as part of your psql database
+	-create your admin ik accound which only you will have
+	-create some dummy nonadmin users
+	-create some dummy tickets
+	-create some dummy comments for some tickets
+	-setup the data to automatically create unique id for the required fields
+		-otherwise I will need to find another way
+	-setup timeCreated automatically for required fields
+		-otherwise I will need to find another way
 
--create counter component scaffold with display number & its three buttons (increment/decrement/reset)
-	-do not worry about the logic as we will do that with redux action creators
+-create heroku psql database
+	-link it with your heroku backend app
+	-insert your mock data within the psql
 
--implement redux to the counter component
+-connect your backend to your heroku psql
+	-install pg
+	-follow the recommended setup by the documentations
+	-test the psql is working according
+
+-setup React-Router for frontend
+	-for now setup 2 dummy routes (home & side)
+
+-setup Redux for frontend
 	-setup redux first with store & reducers
 	-implement @redux-devtools/extension
+		-setup for development only, production should remain off
 	-implement redux-thunk
-	-use counter state for CounterDisplay component
-	-create action creators
-	-connect the action creators to the buttons
+	-create a dummy actioncreator & test it out
 
--add image to /side & optimize it
-	-try to ensure it is optimized using webpack loaders/plugins
-	-Used image-minimizer-webpack-plugin / Imagemin / imagemin-mozjpeg plugins to compress my jpeg image of the lizard
-		-I compress image from 232kb to 11kb using only 5% quality
+-setup PWA for frontend
+	-use workbox
+		-you might want to use injectmanifest since some routes will have dynamic data
+		-also be wary if using pwa is a good idea since data will be changing quite often & perhaps not ideal for this app
+	-generate manifest file
+		-do not worry about SEO, as I will like to reserve that for React-Helmet
 
--include netlify form submission as contact form
-	-create /form route for the contact form
-	-create form link on header
-	-check out doc on how to do it the way Netlify needs it to be
-	-create contact form component
-		-name
-		-email
-		-message
-		-submit button
-	-git commit & test if form submission is working accordingly
+-setup SASS within frontend
+
+-setup Bootstrap for SASS within the frontend
+	-setup the custom.scss & global.scss files like the documentation recommends
+	-setup your two variable primary theme colours for the app
+
+-complete all your backend routes (using the express routes structure)
+	-including error page
+	-check all is working well accordingly with the psql database
+
+-setup all routes for react-router
+	-keep the content simple for now
+		-bewary for workbox dynamic files
+	-including error page
+
+-create / (login/signup route for frontend)
+	-should have 3 buttons
+		-login as demo user
+		-login / signup
+
+-setup Auth0
+	-register app to Auth0
+	-follow their react-router guide for protected routes
+		-particulary to HOC part
+	-ensure once login they will be navigated to the /dashboard route first
+
+-setup free pass for demo user within the Auth0 HOC protected routes
+	-might want to include if statement too
+		-perhaps you might need to use redux too??
+
+-setup responsive @media template with sass/bootstrap from documentation
+	-decide how many breakpoints you want
+
+-create simple layout css grid for all routes with a header / side navbar / footer
+	-EXCEPT home login routes
+		-so first configure the layout to not apply to this route only
+	-apply layout css grid to all other routes
+		-create the outer grid
+		-create the inner grid
+	-create & insert the header & sidebar navbar components within the outer grid
+		-keep it simple for now
+	-create & insert the main & footer components within the inner grid
+		-keep it simple for now
+
+-implement React-Helmet for each routes
+	-you can keep it simple for now
+		-bewarey you used a manifest file with workbox
+
+-setup frontend axios.create() for the backend
+
+-test on the frontend that it can fetch from the psql backend
+	-ensure you test the CRUD operations we need for this to work
+
+-fetch all tickets to be stored on redux when user logins
+
+-f /ticketlist route
+	-display all the tickets
+	-show specific ticket when user clicks on any ticket
+		-console.log() for now
+		-notice the ticketId number as we will need to use that later on
+
+-f /viewticket/:ticketid
+	-test react-router works when given :ticketId params
+
+-f /dashboard
+	-create first box for displaying user assigned tickets
+	-create second box for displaying submittedBy tickets by user themselves
+
+-f /ticketlist
+	-setup click event on any ticket to redirect to /ticket/:ticketid
+		-using the react-router parmas :ticketid
+
+-f /create
+	-setup form for creating a new ticket
+		-iK decide if you need some form validator library
+	-POST new ticket to the server
+		-psql database
+	-insert the new ticket within the redux ticketlist store
+	-check each route contains the new ticket with & without reloading
+
+-f /viewticket/:ticketid
+	-create all the buttons
+		-simple click button for now
+		-edit / delete / mark as complete / mark as incomplete
+	-authorize permission
+		-edit by only admin/submittedBy users
+		-delete by only admin/submittedBy users
+		-mark as Complete by only admin/submittedBy/assignedUser
+		-mark as incomplete by only admin/submittedBy/assignedUser
+
+-create modal confirm box component which will be use for both editing, deleting, complete, incomplete buttons
+	-setup react createPortal()
+	-create modal close button
+	-setup props parameter which will know if it is update, delete , complete , incomplete
+	-setup props parameter to take values required to execute to its nature
+		-iK focus first on updating the server for each functions
+			-afterwards you can focus on updating redux
+		-delete function
+			-only by admin/submittedBy users
+		-edit function
+			-only by admin/submittedBy users
+		-mark as complete function
+			-only by admin/submittedBy/assignedUser users
+		-mark as incomplete function
+			-only by admin/submittedBy/assignedUser users
+	-test everything CRUD operations is working correctly
+
+-f /ticketlist
+	-configure the sort option using a option select button
+
+-f /dashboard
+	-configure the sort option for assigned ticket box
+	-configure the sort option for submittedBy ticket box
+
+-create comment box component which will be display on /viewticket/:ticketid route
+	-will not be stored on redux but fetched every time for each ticket
+	-setup prop parameters for taking ticketId number
+	-find all users who commented on the ticketId number
+		-display them in the order they were created
+	-include edit & delete buttons
+		-can only be done by admin or the user themselves
+
+-create modal for both comment edit & delete button to ensure they certain with their decision
+	-set react createPortal()
+	-create modal close button
+	-setup props parameter identifying if edit or delete
+	-setup props parameter for commentId
+	-setup optional props parameter for textComment that is being edited by user
+		-edit comment function
+			-update server database
+	-delete comment function
+		-update server database
+
+-iK check all logic is working correctly & modify if necessary
+
+-ensure the files routes are all in sync
+	-workbox / react-helmet / seo
+
+-come back to React-helmet SEO, does it need adjusting
+
+-style all the routes. After all logic is working correctly
+	-setup using the first mobile approach with the smallest screen first
+	-perhaps bewary of css supports (autoprefixer)
+		-decide what level of autoprefixer you want or need
+
+-setup react lazy loading for routes that require it
+
+-check on web accessiblity & does it pass
 
 -do remaining COME BACK
+
+-test all is working correctly on the live site
 
 -check up on snyk recommendations
 
@@ -65,28 +245,45 @@
 
 -check if repo name needs changing
 
+-get a real url domain name & configure it
+	-iK frontend only, as backend is not necessary
+	-search for a free domain name
+	-link the domain name to the frontend (heroku)
+
 -README.md file
 
 -git commit & see deploy build was a success
-
-================ TODO
 
 ================ COME BACK
 
 ================ SKIPPED TODOS
 
+================ ALL ROUTES
+- POST /api/user/:id 	= return user profile when login
+- POST /api/user/signup	= create new user in the database & returning user profile
+- POST /api/ticket/create	= create new ticket
+- GET /api/ticket/list 	= return all bugs
+- PATCH /api/ticket/:ticketid	= edit / update a specific bug ticket
+- DELETE /api/ticket/:ticketid	= delete a specific bug ticket
+- GET /api/comment/:ticketid	= get all comments associated to one ticket id
+- POST /api/comment/:ticketid	= create a new comment for a specific ticket
+- PATCH /api/comment/:ticketid	= edit your comment
+- DELETE /api/comment/:ticketid		= delete your comment
+- GET /*	=error response
+
+/ (login)
+/dashboard
+/ticketlist
+/viewticket/:ticketid
+/create 
+/*
+
 ================ WRITE IN YOUR NOTE DOC
 
 ================ NOTE TO SELF
+-keep track for routes within workbox / react-helmet / seo
 
 ================ MISSION
--version05: webpack / react / react-router / redux / sass / redux devtools
--three routes:
-	- / counter page with working buttons
-	- /side whatever page to show path pages work with react router
-	- /* error page
--working counter with redux
--use of SASS within my webpack template
 
 ================ PLAYGROUND
 
