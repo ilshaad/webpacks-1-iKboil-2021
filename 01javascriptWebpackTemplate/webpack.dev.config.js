@@ -1,6 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+/** for .env file env variable
+ * only npm install dotenv
+ */
+// const webpack = require("webpack");
+// require("dotenv").config();
+
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -53,5 +59,14 @@ module.exports = {
         publicPath: "/",
       },
     }),
+
+    /** for .env file env variable */
+    // new webpack.DefinePlugin({
+    //   "process.env": {
+    //     DOMAIN_AUTH0: JSON.stringify(process.env.DOMAIN_AUTH0),
+    //     CLIENT_ID_AUTH0: JSON.stringify(process.env.CLIENT_ID_AUTH0),
+    //     GTESTINGENV: JSON.stringify(process.env.GTESTINGENV),
+    //   },
+    // })
   ],
 };

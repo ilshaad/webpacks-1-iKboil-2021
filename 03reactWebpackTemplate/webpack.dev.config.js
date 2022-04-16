@@ -3,6 +3,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const ReactRefreshBabel = require("react-refresh/babel");
 
+/** for .env file env variable
+ * only npm install dotenv
+ */
+// const webpack = require("webpack");
+// require("dotenv").config();
+
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -59,5 +65,14 @@ module.exports = {
       publicPath: "/",
     }),
     new ReactRefreshWebpackPlugin(),
+
+    /** for .env file env variable */
+    // new webpack.DefinePlugin({
+    //   "process.env": {
+    //     DOMAIN_AUTH0: JSON.stringify(process.env.DOMAIN_AUTH0),
+    //     CLIENT_ID_AUTH0: JSON.stringify(process.env.CLIENT_ID_AUTH0),
+    //     GTESTINGENV: JSON.stringify(process.env.GTESTINGENV),
+    //   },
+    // })
   ],
 };
