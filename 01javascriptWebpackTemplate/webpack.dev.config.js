@@ -62,11 +62,12 @@ module.exports = {
 
     /** for .env file env variable */
     // new webpack.DefinePlugin({
-    //   "process.env": {
-    //     DOMAIN_AUTH0: JSON.stringify(process.env.DOMAIN_AUTH0),
-    //     CLIENT_ID_AUTH0: JSON.stringify(process.env.CLIENT_ID_AUTH0),
-    //     GTESTINGENV: JSON.stringify(process.env.GTESTINGENV),
-    //   },
-    // })
+    //   "process.env.NODE_ENV": JSON.stringify("development"),
+    //   // "process.env": {
+    //   //   DOMAIN_AUTH0: JSON.stringify(process.env.DOMAIN_AUTH0),
+    //   //   CLIENT_ID_AUTH0: JSON.stringify(process.env.CLIENT_ID_AUTH0),
+    //   //   GTESTINGENV: JSON.stringify(process.env.GTESTINGENV),
+    //   // },
+    // }),
   ],
 };
