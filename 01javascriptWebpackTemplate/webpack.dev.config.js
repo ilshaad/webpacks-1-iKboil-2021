@@ -55,7 +55,7 @@ module.exports = {
         viewport: "width=device-width, initial-scale=1",
         description: "iK SEO describe",
         keywords:
-          "iK SEO keywords, however it might not be necessary because it counts for little for google",
+          "iK SEO keywords, however it might not be necessary because it counts for little for google keysearch",
         publicPath: "/",
       },
     }),
